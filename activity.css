@@ -1,0 +1,106 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+}
+
+.header {
+    background: #172554;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.header a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.history-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+.history-card h2 {
+    margin-bottom: 20px;
+}
+
+.activity-item {
+    padding: 18px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-info p {
+    margin-top: 7px;
+    color: #666;
+}
+
+.activity-date {
+    color: #888;
+    font-size: 13px;
+}
+
+.activity-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.add {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.update {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.delete {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.empty-message {
+    text-align: center;
+    color: #777;
+    padding: 30px;
+}
+
+@media (max-width: 600px) {
+    .activity-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

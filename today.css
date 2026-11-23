@@ -1,0 +1,261 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f3fb;
+    color: #29243b;
+}
+
+.today-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: white;
+    box-shadow: 0 3px 15px #0000000d;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #7045b5;
+    text-decoration: none;
+}
+
+.today-header nav {
+    display: flex;
+    gap: 25px;
+}
+
+.today-header nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.today-header nav a.active {
+    color: #7045b5;
+}
+
+.today-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.welcome-section {
+    background: linear-gradient(120deg, #56349b, #a34baf);
+    color: white;
+    padding: 55px 40px;
+    border-radius: 25px;
+    margin-bottom: 40px;
+}
+
+.small-label {
+    font-size: 13px;
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+    margin: 18px 0;
+}
+
+.welcome-section p {
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.location-button {
+    display: inline-block;
+    margin-top: 25px;
+    background: white;
+    color: #7045b5;
+    padding: 13px 22px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.daily-section h2,
+.quick-section h2 {
+    margin-bottom: 22px;
+    font-size: 25px;
+}
+
+.daily-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.daily-card {
+    text-decoration: none;
+    color: #29243b;
+    padding: 25px;
+    border-radius: 20px;
+    min-height: 190px;
+    transition: .3s;
+}
+
+.daily-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #00000012;
+}
+
+.daily-card span {
+    font-size: 35px;
+}
+
+.daily-card h3 {
+    margin: 15px 0 8px;
+}
+
+.daily-card p {
+    line-height: 1.6;
+}
+
+.daily-card small {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.purple { background: #eee5ff; }
+.orange { background: #fff0e3; }
+.green { background: #e3f7eb; }
+.blue { background: #e5efff; }
+
+.quick-section {
+    margin-top: 45px;
+}
+
+.quick-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.quick-grid a {
+    flex: 1;
+    min-width: 200px;
+    background: white;
+    color: #56349b;
+    padding: 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 3px 12px #00000008;
+}
+
+.today-footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 35px;
+    background: white;
+    color: #777;
+}
+
+@media (max-width: 650px) {
+    .today-header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .today-header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .welcome-section {
+        padding: 35px 22px;
+    }
+
+    .welcome-section h1 {
+        font-size: 27px;
+    }
+
+    .daily-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =================================
+   LATEST LOCAL POSTS
+================================= */
+
+.local-news-section {
+    margin-top: 40px;
+}
+
+.local-news-section h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #56349b;
+}
+
+.local-news-description {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.local-news-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.local-news-card {
+    background: white;
+    padding: 22px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px #00000009;
+}
+
+.local-news-card h3 {
+    color: #56349b;
+    margin-bottom: 10px;
+}
+
+.local-news-card p {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.local-news-location {
+    font-size: 13px;
+    color: #888;
+}
+
+.local-news-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #7045b5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.local-news-message {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    color: #777;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 650px) {
+    .local-news-list {
+        grid-template-columns: 1fr;
+    }
+}
+

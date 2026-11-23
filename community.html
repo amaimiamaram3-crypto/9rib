@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Communauté | 9RIB</title>
+
+    <link rel="stylesheet" href="community.css">
+    <link rel="stylesheet" href="quick-menu.css">
+</head>
+
+<body>
+
+<header class="community-header">
+    <a href="index.html" class="logo">9RIB</a>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="community.html" class="active">Communauté</a>
+        <a href="about.html">À propos</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main class="community-container">
+
+    <!-- HERO -->
+    <section class="community-hero">
+        <span class="small-label">COMMUNAUTÉ 9RIB</span>
+
+        <h1>Entraide et partage ❤️</h1>
+
+        <p>
+            Vous avez un problème ou un besoin ?
+            Publiez-le et laissez la communauté vous aider.
+        </p>
+    </section>
+
+    <!-- NOTIFICATIONS -->
+    <section class="notifications-section">
+
+        <button type="button" id="notificationToggle">
+            🔔 Notifications
+            <span id="notificationCount">0</span>
+        </button>
+
+        <div id="notificationsPanel" hidden>
+            <h3>Mes notifications</h3>
+
+            <div id="notificationsList">
+                <p>Aucune notification pour le moment.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- PUBLISH FORM -->
+    <section class="publish-section">
+
+        <h2>Créer une publication</h2>
+
+        <p class="section-description">
+            Expliquez votre besoin pour trouver de l'aide.
+        </p>
+
+        <form id="postForm">
+
+            <label for="postTitle">
+                Titre de votre publication
+            </label>
+
+            <input
+                type="text"
+                id="postTitle"
+                placeholder="Exemple : J'ai besoin d'un coup de main..."
+                maxlength="100"
+                required
+            >
+
+            <label for="postDescription">
+                Décrivez votre besoin
+            </label>
+
+            <textarea
+                id="postDescription"
+                rows="5"
+                placeholder="Expliquez votre problème ou ce que vous recherchez..."
+                maxlength="1500"
+                required
+            ></textarea>
+
+            <div class="location-fields">
+
+                <div>
+                    <label for="postGovernorate">
+                        Gouvernorat
+                    </label>
+
+                    <select id="postGovernorate" required>
+                        <option value="">
+                            Choisir un gouvernorat
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="postDelegation">
+                        Délégation
+                    </label>
+
+                    <select id="postDelegation" required disabled>
+                        <option value="">
+                            Choisir une délégation
+                        </option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" id="publishButton">
+                Publier ma demande
+            </button>
+
+            <p id="postSuccess" class="success-message"></p>
+
+            <p id="postError" class="error-message"></p>
+
+        </form>
+
+    </section>
+
+    <!-- COMMUNITY STATS -->
+    <section class="community-stats">
+
+        <div class="stat-card stat-purple">
+            <span>📝</span>
+            <h3 id="totalPosts">0</h3>
+            <p>Publications</p>
+        </div>
+
+        <div class="stat-card stat-pink">
+            <span>❤️</span>
+            <h3 id="totalLikes">0</h3>
+            <p>J’aime</p>
+        </div>
+
+        <div class="stat-card stat-blue">
+            <span>💬</span>
+            <h3 id="totalComments">0</h3>
+            <p>Commentaires</p>
+        </div>
+
+        <div class="stat-card stat-orange">
+            <span>🌍</span>
+            <h3 id="totalRegions">0</h3>
+            <p>Régions</p>
+        </div>
+
+    </section>
+
+    <!-- POSTS -->
+    <section class="posts-section">
+
+        <div class="posts-heading">
+            <div>
+                <h2>Les publications</h2>
+                <p>Découvrez les besoins de la communauté.</p>
+            </div>
+        </div>
+
+        <!-- FILTERS -->
+        <div class="posts-filters">
+
+            <select id="filterGovernorate">
+                <option value="">
+                    Tous les gouvernorats
+                </option>
+            </select>
+
+            <select id="filterDelegation" disabled>
+                <option value="">
+                    Toutes les délégations
+                </option>
+            </select>
+
+            <button type="button" id="resetPostFilters">
+                Réinitialiser
+            </button>
+
+        </div>
+
+        <!-- POSTS LIST -->
+        <div id="postsList">
+            <p class="loading-message">
+                Chargement des publications...
+            </p>
+        </div>
+
+        <p id="postsEmpty" hidden>
+            Aucune publication pour le moment.
+        </p>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="community-footer">
+    <p>© 2026 9RIB - Tous droits réservés.</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script type="module" src="community.js"></script>
+<script src="quick-menu.js"></script>
+
+</body>
+</html>
+

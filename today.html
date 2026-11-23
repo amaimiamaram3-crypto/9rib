@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>9RIB Aujourd'hui</title>
+
+    <link rel="stylesheet" href="today.css">
+    
+    <link rel="stylesheet" href="quick-menu.css">
+</head>
+
+<body>
+
+<header class="today-header">
+    <a href="index.html" class="logo">9RIB</a>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="today.html" class="active">9RIB اليوم</a>
+        <a href="community.html">Communauté</a>
+    </nav>
+</header>
+
+<main class="today-container">
+
+    <section class="welcome-section">
+        <span class="small-label">BIENVENUE SUR 9RIB</span>
+
+        <h1>نهارك أسهل مع 9RIB 👋</h1>
+
+        <p>
+            اكتشف كل ما تحتاجه في منطقتك،
+            وتواصل مع الناس واستفد من خدمات مجتمعك.
+        </p>
+
+        <a href="index.html#location" class="location-button">
+            📍 اختار منطقتك
+        </a>
+    </section>
+
+    <section class="daily-section">
+
+        <h2>اكتشف 9RIB اليوم 🌟</h2>
+
+        
+<div class="daily-grid">
+
+    <a href="community.html#postsList" class="daily-card purple">
+        <span>📢</span>
+        <h3>أخبار منطقتك</h3>
+        <p>تابع الإعلانات والمعلومات المحلية.</p>
+    </a>
+
+    <a href="marketplace.html" class="daily-card orange">
+    <span>🛍️</span>
+    <h3>بيع وشراء</h3>
+    <p>بيع، اشري أو أعطي حاجات ما عادش تستحقها.</p>
+    <small>اكتشف الإعلانات ←</small>
+</a>
+
+    <a href="community.html" class="daily-card green">
+        <span>🤝</span>
+        <h3>مساعدة وتطوّع</h3>
+        <p>اطلب المساعدة أو ساعد شخص آخر.</p>
+    </a>
+
+    <a href="events.html" class="daily-card blue">
+    <span>🎉</span>
+    <h3>أنشطة ومناسبات</h3>
+    <p>اكتشف المناسبات والأنشطة والفعاليات القريبة منك.</p>
+    <small>اكتشف الفعاليات ←</small>
+</a>
+
+</div>
+
+
+    </section>
+
+
+<section class="quick-section">
+
+    <h2>شنوّة تحب تعمل اليوم؟</h2>
+
+    <div class="quick-grid">
+
+        <a href="index.html#realProviders">
+            🔧 اكتشف الخدمات
+        </a>
+
+        <a href="community.html">
+            💬 ادخل للمجتمع
+        </a>
+
+        <a href="community.html">
+            ✍️ انشر طلب مساعدة
+        </a>
+
+    </div>
+
+</section>
+
+<section class="local-news-section">
+
+    <h2>📢 أخبار منطقتك</h2>
+
+    <p class="local-news-description">
+        آخر المنشورات والطلبات من منطقتك.
+    </p>
+
+    <div class="local-news-list" id="localNewsList">
+        <p class="local-news-message">
+            جاري تحميل المنشورات...
+        </p>
+    </div>
+
+</section>
+
+
+</main>
+
+<footer class="today-footer">
+    <p>© 2026 9RIB - Tous droits réservés.</p>
+</footer>
+
+<script type="module" src="today.js"></script>
+<script src="quick-menu.js"></script>
+
+</body>
+
+</html>

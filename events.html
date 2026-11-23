@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الأنشطة والمناسبات | 9RIB</title>
+
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="quick-menu.css">
+</head>
+
+<body>
+
+<header class="events-header">
+    <a href="index.html" class="logo">9RIB</a>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="today.html">9RIB اليوم</a>
+        <a href="community.html">Communauté</a>
+        <a href="marketplace.html">بيع وشراء</a>
+        <a href="events.html" class="active">المناسبات</a>
+    </nav>
+</header>
+
+<main class="events-container">
+
+    <section class="events-hero">
+        <span>اكتشف وشارك 🎉</span>
+        <h1>الأنشطة والمناسبات في منطقتك</h1>
+        <p>
+            اكتشف التظاهرات والأنشطة القريبة منك،
+            وشارك مناسبتك مع مجتمع 9RIB.
+        </p>
+
+        <a href="#publishEvent" class="events-button">
+            📅 انشر مناسبة جديدة
+        </a>
+    </section>
+
+    <section class="publish-event-section" id="publishEvent">
+
+        <h2>📢 انشر نشاط أو مناسبة</h2>
+
+        <p>شارك المعلومات باش الناس في منطقتك يعرفوا بالمناسبة.</p>
+
+        <form id="eventForm">
+
+            <label for="eventTitle">عنوان المناسبة</label>
+            <input
+                type="text"
+                id="eventTitle"
+                maxlength="100"
+                placeholder="مثال: معرض الصناعات التقليدية"
+                required
+            >
+
+            <label for="eventDescription">التفاصيل</label>
+            <textarea
+                id="eventDescription"
+                rows="4"
+                maxlength="1500"
+                placeholder="اكتب تفاصيل المناسبة..."
+                required
+            ></textarea>
+
+            <label for="eventCategory">نوع المناسبة</label>
+            <select id="eventCategory" required>
+                <option value="">اختار النوع</option>
+                <option value="culture">🎭 ثقافة وفنون</option>
+                <option value="sport">⚽ رياضة</option>
+                <option value="education">📚 تعليم وتكوين</option>
+                <option value="charity">❤️ عمل خيري وتطوّع</option>
+                <option value="festival">🎉 مهرجانات واحتفالات</option>
+                <option value="other">📌 أخرى</option>
+            </select>
+
+            <label for="eventDate">تاريخ المناسبة</label>
+            <input type="date" id="eventDate" required>
+
+            <label for="eventTime">التوقيت</label>
+            <input type="time" id="eventTime" required>
+
+            <label for="eventPlace">المكان</label>
+            <input
+                type="text"
+                id="eventPlace"
+                maxlength="150"
+                placeholder="مثال: دار الثقافة..."
+                required
+            >
+
+            <label for="eventGovernorate">الولاية</label>
+            <select id="eventGovernorate" required>
+                <option value="">اختار الولاية</option>
+            </select>
+
+            <label for="eventDelegation">المعتمدية</label>
+            <select id="eventDelegation" required disabled>
+                <option value="">اختار المعتمدية</option>
+            </select>
+
+            <button type="submit" id="publishEventButton">
+                نشر المناسبة
+            </button>
+
+            <p id="eventSuccess" class="success-message"></p>
+            <p id="eventError" class="error-message"></p>
+
+        </form>
+
+    </section>
+
+    <section class="events-list-section">
+
+        <h2>🎊 المناسبات القادمة</h2>
+
+        <p>اكتشف الأنشطة والتظاهرات المنشورة على 9RIB.</p>
+
+        <div class="events-filters">
+
+            <select id="filterEventGovernorate">
+                <option value="">كل الولايات</option>
+            </select>
+
+            <select id="filterEventCategory">
+                <option value="">كل الأنواع</option>
+                <option value="culture">ثقافة وفنون</option>
+                <option value="sport">رياضة</option>
+                <option value="education">تعليم وتكوين</option>
+                <option value="charity">عمل خيري وتطوّع</option>
+                <option value="festival">مهرجانات واحتفالات</option>
+                <option value="other">أخرى</option>
+            </select>
+
+        </div>
+
+        <div id="eventsList" class="events-list">
+            <p>جاري تحميل المناسبات...</p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="events-footer">
+    <p>© 2026 9RIB - Tous droits réservés.</p>
+</footer>
+
+<script type="module" src="events.js"></script>
+<script src="quick-menu.js"></script>
+
+</body>
+</html>
