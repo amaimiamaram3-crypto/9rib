@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>9rib - Services près de vous</title>
+    <meta name="description" content="Découvrez les services et commerces près de chez vous partout en Tunisie.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="quick-menu.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        <span class="logo-icon">9</span>
+        <span>9rib<span class="logo-dot">.</span></span>
+    </a>
+
+    <nav>
+        <a href="#home">Accueil</a>
+        <a href="#services">Catégories</a>
+        <a href="#realProviders">Prestataires</a>
+        <a href="#location">Ma région</a>
+        <a href="about.html">À propos</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <select id="languageSelect" aria-label="Langue">
+        <option value="fr">FR</option>
+        <option value="ar">AR</option>
+        <option value="en">EN</option>
+    </select>
+
+    <a href="provider.html" class="provider-btn">
+        + Devenir prestataire
+    </a>
+    <a href="admin.html" id="adminAccessBtn" class="admin-access-btn" hidden>
+    Admin
+    </a>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="welcome-badge">
+            BIENVENUE SUR 9RIB
+        </span>
+
+        <h1>
+            9rib !
+            <br>
+            Trouvez ce qu'il vous faut,
+            <span>près de chez vous.</span>
+        </h1>
+
+        <p>
+            Services, commerces, artisans et professionnels...
+            Tout ce dont vous avez besoin est à portée de main !
+        </p>
+
+        <div class="search-box">
+
+            <span class="search-icon">⌕</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Rechercher un service, un commerce..."
+            >
+
+            <button id="searchButton" type="button">
+                Rechercher
+            </button>
+
+        </div>
+
+        <div class="hero-features">
+            <span>Services locaux</span>
+            <span>Partout en Tunisie</span>
+            <span>Simple et rapide</span>
+        </div>
+
+    </div>
+
+    <!-- HERO PHOTO -->
+    <div class="hero-image">
+
+        <div class="tunisia-scene">
+
+            <img
+                class="hero-photo"
+                src="https://images.pexels.com/photos/37284586/pexels-photo-37284586/free-photo-of-charming-blue-and-white-alleyway-in-sidi-bou-said.jpeg?auto=compress&dpr=1&h=750&w=1260"
+                alt="Une ruelle traditionnelle à Sidi Bou Saïd en Tunisie"
+            >
+
+            <div class="hero-photo-overlay">
+                <span>BIENVENUE EN TUNISIE</span>
+
+                <h2>
+                    Tout près.<br>
+                    Tout simplement.
+                </h2>
+
+                <p>
+                    Découvrez les services et les professionnels de votre région.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORY SECTION -->
+<section class="services-section" id="services">
+
+    <div class="section-heading">
+
+        <span class="small-title">DÉCOUVRIR</span>
+
+        <h2>Explorez nos catégories</h2>
+
+        <p>
+            Quel que soit votre besoin, nous sommes là pour vous aider !
+        </p>
+
+    </div>
+
+    <div class="services-grid">
+
+        <!-- SANTE -->
+        <article class="service-card">
+
+            <div class="category-illustration health">
+
+                <img
+                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=700&q=85"
+                    alt="Professionnel de santé"
+                >
+
+            </div>
+
+            <div class="service-info">
+                <h3>Santé</h3>
+                <p>Centres de santé et professionnels.</p>
+            </div>
+
+        </article>
+
+
+        <!-- MAISON -->
+        <article class="service-card">
+
+            <div class="category-illustration home">
+
+                <img
+                    src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=85"
+                    alt="Service de maison et entretien"
+                >
+
+            </div>
+
+            <div class="service-info">
+                <h3>Maison</h3>
+                <p>Entretien et services à domicile.</p>
+            </div>
+
+        </article>
+
+
+        <!-- COMMERCE -->
+<article class="service-card">
+
+    <div class="category-illustration shop">
+
+        <img
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=700&q=85"
+            alt="Magasin de vêtements et commerce"
+            onerror="this.onerror=null; this.src='https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=700';"
+        >
+
+    </div>
+
+    <div class="service-info">
+        <h3>Commerce</h3>
+        <p>Magasins et commerces locaux.</p>
+    </div>
+
+</article>
+
+        <!-- EDUCATION -->
+        <article class="service-card">
+
+            <div class="category-illustration education">
+
+                <img
+                    src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=85"
+                    alt="Éducation et salle de classe"
+                >
+
+            </div>
+
+            <div class="service-info">
+                <h3>Éducation</h3>
+                <p>Écoles, cours et formations.</p>
+            </div>
+
+        </article>
+
+
+        <!-- TRANSPORT -->
+        <article class="service-card">
+
+            <div class="category-illustration transport">
+
+                <img
+                    src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=700&q=85"
+                    alt="Transport en bus"
+                >
+
+            </div>
+
+            <div class="service-info">
+                <h3>Transport</h3>
+                <p>Transport et déplacements.</p>
+            </div>
+
+        </article>
+
+
+        <!-- BEAUTE -->
+        <article class="service-card">
+
+            <div class="category-illustration beauty">
+
+                <img
+                    src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=700&q=85"
+                    alt="Salon de beauté et coiffure"
+                >
+
+            </div>
+
+            <div class="service-info">
+                <h3>Beauté</h3>
+                <p>Coiffure et soins personnels.</p>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- PROVIDERS -->
+<section class="nearby-section" id="realProviders">
+
+    <div class="section-heading">
+
+        <span class="small-title">NOS PROFESSIONNELS</span>
+
+        <h2>Les services près de vous</h2>
+
+        <p>
+            Découvrez les prestataires inscrits sur 9rib.
+        </p>
+
+    </div>
+
+    <div class="provider-filters">
+
+        <select id="providerGovernorateFilter">
+            <option value="">Tous les gouvernorats</option>
+        </select>
+
+        <select id="providerDelegationFilter">
+            <option value="">Toutes les délégations</option>
+        </select>
+
+        <select id="providerCategoryFilter">
+            <option value="">Toutes les catégories</option>
+            <option value="Santé">Santé</option>
+            <option value="Maison">Maison</option>
+            <option value="Commerce">Commerce</option>
+            <option value="Éducation">Éducation</option>
+            <option value="Transport">Transport</option>
+            <option value="Beauté">Beauté</option>
+            <option value="Autre">Autre</option>
+        </select>
+
+        <button type="button" id="resetProviderFilters">
+            Réinitialiser ↺
+        </button>
+
+        <input
+            type="search"
+            id="providerSearchInput"
+            placeholder="Rechercher un prestataire..."
+        >
+
+    </div>
+
+    <div id="providersList" class="services-grid">
+        <p>Chargement des services...</p>
+    </div>
+
+    <p id="providersEmpty" hidden>
+        Aucun service disponible pour le moment.
+    </p>
+
+</section>
+
+
+<!-- LOCATION -->
+<section class="location-section" id="location">
+
+    <div class="location-content">
+
+        <span class="small-title">VOTRE RÉGION</span>
+
+        <h2>On cherche autour de vous !</h2>
+
+        <p>
+            Choisissez votre gouvernorat et votre délégation
+            pour trouver les services proches de vous.
+        </p>
+
+        <div class="location-form">
+
+            <div class="form-group">
+
+                <label for="governorate">Gouvernorat</label>
+
+                <select id="governorate">
+
+                    <option value="">Choisir un gouvernorat</option>
+
+                    <option value="Tunis">Tunis</option>
+                    <option value="Ariana">Ariana</option>
+                    <option value="Ben Arous">Ben Arous</option>
+                    <option value="Manouba">Manouba</option>
+                    <option value="Nabeul">Nabeul</option>
+                    <option value="Zaghouan">Zaghouan</option>
+                    <option value="Bizerte">Bizerte</option>
+                    <option value="Béja">Béja</option>
+                    <option value="Jendouba">Jendouba</option>
+                    <option value="Le Kef">Le Kef</option>
+                    <option value="Siliana">Siliana</option>
+                    <option value="Sousse">Sousse</option>
+                    <option value="Monastir">Monastir</option>
+                    <option value="Mahdia">Mahdia</option>
+                    <option value="Sfax">Sfax</option>
+                    <option value="Kairouan">Kairouan</option>
+                    <option value="Kasserine">Kasserine</option>
+                    <option value="Sidi Bouzid">Sidi Bouzid</option>
+                    <option value="Gabès">Gabès</option>
+                    <option value="Médenine">Médenine</option>
+                    <option value="Tataouine">Tataouine</option>
+                    <option value="Gafsa">Gafsa</option>
+                    <option value="Tozeur">Tozeur</option>
+                    <option value="Kébili">Kébili</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="delegation">Délégation</label>
+
+                <select id="delegation" disabled>
+                    <option value="">Choisir une délégation</option>
+                </select>
+
+            </div>
+
+
+            <div class="form-group full-width">
+
+                <label for="neighborhood">Quartier (facultatif)</label>
+
+                <input
+                    type="text"
+                    id="neighborhood"
+                    placeholder="Exemple : Sfax Ville"
+                >
+
+            </div>
+
+
+            <button id="saveLocation" type="button">
+                Enregistrer ma région
+            </button>
+
+        </div>
+
+        <p id="locationResult"></p>
+
+    </div>
+
+</section>
+
+
+<!-- NEARBY RESULTS -->
+<section class="nearby-section nearby-results-section">
+
+    <div class="section-heading">
+
+        <span class="small-title">SELON VOTRE RÉGION</span>
+
+        <h2>Les services autour de vous</h2>
+
+        <p>
+            Découvrez les lieux et services proches de votre position.
+        </p>
+
+    </div>
+
+    <div id="nearbyResults" class="services-grid"></div>
+
+    <p id="noNearbyResults">
+        Choisissez votre région pour découvrir les services.
+    </p>
+
+</section>
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <a href="index.html" class="logo">
+        <span class="logo-icon">9</span>
+        <span>9rib<span class="logo-dot">.</span></span>
+    </a>
+
+    <p>
+        9rib... toujours plus proche de vous
+        <br>
+        © 2026 9rib - Tous droits réservés.
+    </p>
+
+    <div>
+        <a href="about.html">À propos</a>
+        <a href="contact.html">Contact</a>
+        <a href="provider.html">Devenir prestataire</a>
+    </div>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+<script type="module" src="providers.js"></script>
+<script src="script.js"></script>
+<script type="module" src="nearby-search.js"></script>
+<script src="quick-menu.js"></script>
+<script type="module" src="admin-access.js"></script>
+
+</body>
+</html>

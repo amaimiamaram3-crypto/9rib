@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Détails du service | 9rib</title>
+
+    <link rel="stylesheet" href="details.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quick-menu.css">
+</head>
+
+<body>
+
+    <header class="details-navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">9</span>
+            <span>9rib<span class="logo-dot">.</span></span>
+        </a>
+
+        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+    </header>
+
+    <main class="details-container">
+
+        <div class="details-heading">
+            <span class="eyebrow">DÉCOUVRIR</span>
+            <h1>Détails du service</h1>
+            <p>Retrouvez toutes les informations de ce prestataire.</p>
+        </div>
+
+        <section id="loadingMessage" class="status-message">
+            Chargement des informations...
+        </section>
+
+        <section id="errorMessage" class="status-message error" hidden>
+            Service introuvable ou impossible à charger.
+            <a href="index.html">Retour à l'accueil</a>
+        </section>
+
+        <article id="serviceDetails" class="details-card" hidden>
+
+            <div class="details-top">
+                <div class="service-icon" id="serviceIcon">📍</div>
+
+                <div>
+                    <span class="category-label" id="serviceCategory"></span>
+                    <h2 id="serviceName"></h2>
+                    <p id="serviceLocation"></p>
+                </div>
+            </div>
+
+            <div class="details-divider"></div>
+
+            <h3>Informations du prestataire</h3>
+            <div class="info-row">
+    <span>👤 Nom du propriétaire</span>
+    <p id="serviceOwner">Non précisé</p>
+</div>
+
+<div class="info-row">
+    <span>🔎 Spécialité / Type de service</span>
+    <p id="serviceType">Non précisé</p>
+</div>
+
+            <div class="info-row">
+                <span>📍 Adresse</span>
+                <p id="serviceAddress">Non précisée</p>
+            </div>
+
+            <div class="info-row">
+                <span>🏙️ Gouvernorat</span>
+                <p id="serviceGovernorate">Non précisé</p>
+            </div>
+
+            <div class="info-row">
+                <span>📌 Délégation</span>
+                <p id="serviceDelegation">Non précisée</p>
+            </div>
+
+            <div class="info-row">
+                <span>📞 Téléphone</span>
+                <p id="servicePhone">Non précisé</p>
+            </div>
+
+            <a id="callButton" class="contact-button" hidden>
+                Contacter le prestataire
+            </a>
+            <div class="info-row" id="mapRow" hidden>
+    <span>🗺️ Emplacement</span>
+    <p>
+        <a id="mapButton" target="_blank" rel="noopener">
+            Voir sur Google Maps
+        </a>
+    </p>
+</div>
+
+        </article>
+
+        <a href="index.html" class="back-home">
+            ← Retour aux services
+        </a>
+
+    </main>
+
+    <footer class="details-footer">
+        <p>9rib © 2026 — Votre quartier, connecté.</p>
+    </footer>
+
+    <script type="module" src="details.js"></script>
+    <script src="quick-menu.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1910 @@
+/* ========================================
+   9RIB 🇹🇳 - TUNISIAN CARTOON DESIGN
+   RED & WHITE EDITION
+======================================== */
+
+:root {
+    --primary: #e51b2b;
+    --primary-dark: #bd1020;
+    --red-light: #fff0f1;
+    --dark: #202238;
+    --text: #696b7b;
+    --light: #fff8f7;
+    --white: #ffffff;
+    --border: #f1dfe0;
+    --shadow: 0 12px 35px rgba(80, 20, 30, 0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    min-height: 82px;
+    padding: 12px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 29px;
+    font-weight: 900;
+    color: var(--dark);
+}
+
+.logo-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    background: var(--primary);
+    color: white;
+    border-radius: 14px 14px 14px 5px;
+    box-shadow: 0 5px 12px rgba(229,27,43,0.25);
+}
+
+.logo-dot {
+    color: var(--primary);
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.navbar nav a {
+    font-size: 14px;
+    font-weight: 800;
+    color: #55566b;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--primary);
+}
+
+#languageSelect {
+    padding: 10px 13px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: white;
+    font-weight: 800;
+}
+
+.provider-btn {
+    background: var(--primary);
+    color: white;
+    padding: 13px 19px;
+    border-radius: 13px;
+    font-weight: 900;
+    box-shadow: 0 5px 15px rgba(229,27,43,0.2);
+    transition: 0.3s;
+}
+
+.provider-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 610px;
+    padding: 65px 7%;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 45px;
+    background:
+        radial-gradient(circle at 85% 20%, #ffe1e3 0, transparent 35%),
+        linear-gradient(120deg, #fffafa, #fff1f1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "🇹🇳";
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 55px;
+    opacity: 0.12;
+}
+
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.small-title {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+    background: #ffe5e7;
+    padding: 9px 15px;
+    border-radius: 30px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.17;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero-content > p {
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    padding: 9px;
+    border-radius: 17px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    max-width: 560px;
+}
+
+.search-icon {
+    padding-left: 10px;
+    font-size: 23px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 13px 8px;
+    background: transparent;
+}
+
+.search-box button,
+.location-form button {
+    background: var(--primary);
+    color: white;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+.search-box button:hover,
+.location-form button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+    margin-top: 25px;
+    color: #55566b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* ========================================
+   HERO CARTOON
+======================================== */
+
+.hero-image {
+    position: relative;
+    min-width: 0;
+}
+
+.cartoon-background {
+    min-height: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #dff2ff, #fff0e8);
+    border: 7px solid white;
+    border-radius: 45% 45% 30px 30px;
+    box-shadow: 0 20px 45px rgba(80,30,40,0.12);
+    overflow: hidden;
+}
+
+.cartoon-background::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.55);
+    border-radius: 50%;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-mascot {
+    position: relative;
+    z-index: 2;
+    width: 78%;
+    height: 370px;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 12px rgba(0,0,0,0.10));
+    animation: mascotFloat 3s ease-in-out infinite;
+}
+
+@keyframes mascotFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.sun-decoration {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 48px;
+}
+
+.cloud-decoration {
+    position: absolute;
+    top: 65px;
+    left: 25px;
+    font-size: 45px;
+}
+
+.location-decoration {
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    font-size: 35px;
+}
+
+.heart-decoration {
+    position: absolute;
+    top: 45%;
+    left: 25px;
+    font-size: 32px;
+}
+
+.mascot-message {
+    position: absolute;
+    bottom: 22px;
+    left: 20px;
+    z-index: 3;
+    background: white;
+    padding: 13px 18px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.mascot-message strong {
+    color: var(--primary);
+    font-size: 15px;
+}
+
+.mascot-message p {
+    font-size: 12px;
+    color: var(--text);
+    margin-top: 4px;
+}
+
+/* ========================================
+   SECTION HEADINGS
+======================================== */
+
+.services-section,
+.nearby-section {
+    padding: 85px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2,
+.location-content h2 {
+    font-size: clamp(27px, 4vw, 38px);
+    font-weight: 900;
+    margin-bottom: 13px;
+}
+
+.section-heading p,
+.location-content > p {
+    color: var(--text);
+    line-height: 1.8;
+}
+
+/* ========================================
+   CARTOON CATEGORY CARDS
+======================================== */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    border: 2px solid #f6e9e9;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 7px 22px rgba(60,20,30,0.045);
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-9px);
+    border-color: #ffc4c9;
+    box-shadow: 0 18px 35px rgba(229,27,43,0.12);
+}
+
+.category-illustration {
+    height: 185px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.category-illustration img {
+    height: 145px;
+    width: 145px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.service-card:hover .category-illustration img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.category-illustration > span {
+    position: absolute;
+    bottom: 12px;
+    right: 15px;
+    font-size: 32px;
+    background: white;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+}
+
+.health {
+    background: #ffe9ec;
+}
+
+.home {
+    background: #fff0dc;
+}
+
+.shop {
+    background: #e5f5ff;
+}
+
+.education {
+    background: #eeeaff;
+}
+
+.transport {
+    background: #e6f7ef;
+}
+
+.beauty {
+    background: #ffe8f3;
+}
+
+.service-info {
+    padding: 20px 22px 24px;
+}
+
+.service-info h3 {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 7px;
+}
+
+.service-info p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   PROVIDERS
+======================================== */
+
+.nearby-section {
+    background: #fffafa;
+}
+
+.provider-filters {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin: 30px auto;
+    max-width: 1100px;
+}
+
+.provider-filters select,
+.provider-filters button {
+    width: 100%;
+    min-width: 0;
+    padding: 14px;
+    border-radius: 13px;
+    font-size: 14px;
+}
+
+.provider-filters select {
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--dark);
+}
+
+.provider-filters button {
+    background: var(--primary);
+    color: white;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+.provider-filters button:hover {
+    background: var(--primary-dark);
+}
+
+#providersList.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+.provider-card {
+    background: white;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.provider-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(229,27,43,0.10);
+}
+
+.provider-card h3,
+.provider-card .service-info h3 {
+    color: var(--primary);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.provider-card p {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 7px;
+}
+
+#providersEmpty {
+    text-align: center;
+    color: var(--text);
+    padding: 25px;
+}
+
+/* ========================================
+   LOCATION
+======================================== */
+
+.location-section {
+    padding: 85px 7%;
+    background:
+        radial-gradient(circle at 10% 20%, #ffe0e3, transparent 35%),
+        #fff5f4;
+}
+
+.location-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.location-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+    background: white;
+    padding: 32px;
+    border-radius: 25px;
+    margin-top: 35px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    outline: none;
+    background: white;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(229,27,43,0.08);
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.location-form button {
+    grid-column: 1 / -1;
+}
+
+#locationResult {
+    margin-top: 20px;
+    color: var(--primary);
+    font-weight: 900;
+}
+
+.location-cartoon {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 35px;
+}
+
+.location-cartoon span {
+    font-size: 55px;
+    animation: mascotFloat 3s ease-in-out infinite;
+}
+
+.location-cartoon span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.location-cartoon span:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+/* ========================================
+   NEARBY RESULTS
+======================================== */
+
+.nearby-section .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#nearbyResults:empty {
+    display: none;
+}
+
+#noNearbyResults {
+    text-align: center;
+    color: var(--text);
+    padding: 25px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    background: #202238;
+    color: white;
+    padding: 45px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.footer .logo {
+    color: white;
+}
+
+.footer p {
+    color: #d1d1dd;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.footer div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 13px;
+}
+
+.footer div a:hover {
+    color: #ff9da5;
+}
+
+/* ========================================
+   ARABIC / RTL
+======================================== */
+
+body[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Cairo', 'Nunito', sans-serif;
+}
+
+body[dir="rtl"] .hero {
+    direction: rtl;
+}
+
+body[dir="rtl"] .location-form {
+    text-align: right;
+}
+
+body[dir="rtl"] .footer {
+    direction: rtl;
+}
+
+body[dir="rtl"] .mascot-message {
+    left: auto;
+    right: 20px;
+}
+
+body[dir="rtl"] .category-illustration > span {
+    right: auto;
+    left: 15px;
+}
+
+/* ========================================
+   RESPONSIVE - TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 15px 4%;
+        flex-wrap: wrap;
+    }
+
+    .navbar nav {
+        order: 5;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        padding: 55px 5%;
+        gap: 25px;
+    }
+
+    .hero-features {
+        gap: 12px;
+    }
+
+    .provider-filters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .provider-btn {
+        font-size: 12px;
+        padding: 11px 13px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 5%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-content > p {
+        font-size: 14px;
+    }
+
+    .hero-features {
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    .search-box {
+        flex-wrap: wrap;
+    }
+
+    .search-box input {
+        width: 65%;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .cartoon-background {
+        min-height: 350px;
+    }
+
+    .hero-mascot {
+        height: 290px;
+    }
+
+    .services-section,
+    .nearby-section {
+        padding: 60px 5%;
+    }
+
+    .services-grid,
+    #providersList.services-grid,
+    .nearby-section .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .category-illustration {
+        height: 145px;
+    }
+
+    .category-illustration img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .service-info {
+        padding: 15px;
+    }
+
+    .service-info h3 {
+        font-size: 17px;
+    }
+
+    .service-info p {
+        font-size: 12px;
+    }
+
+    .provider-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .location-section {
+        padding: 60px 5%;
+    }
+
+    .location-form {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .full-width,
+    .location-form button {
+        grid-column: auto;
+    }
+
+    .section-heading h2,
+    .location-content h2 {
+        font-size: 27px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer div {
+        justify-content: center;
+    }
+}
+
+/* ========================================
+   EXTRA SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+
+    .services-grid,
+    #providersList.services-grid,
+    .nearby-section .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #ff9da5;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+/* =================================
+   9RIB TUNISIAN HERO - NEW DESIGN
+================================= */
+
+.hero {
+    background:
+        linear-gradient(120deg, #fffafa, #ffe9eb);
+    min-height: 620px;
+    padding: 65px 7%;
+    gap: 35px;
+}
+
+.welcome-badge {
+    display: inline-block;
+    background: white;
+    color: #e51b2b;
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 900;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    color: #202238;
+    font-weight: 1000;
+}
+
+.hero h1 span {
+    color: #e51b2b;
+}
+
+.hero-content > p {
+    max-width: 530px;
+}
+
+.tunisia-scene {
+    position: relative;
+    min-height: 460px;
+    background: linear-gradient(
+        180deg,
+        #8fd1ff 0%,
+        #d9f0ff 65%,
+        #ffe5d5 100%
+    );
+    border: 7px solid white;
+    border-radius: 35px;
+    box-shadow: 0 20px 45px rgba(80,20,30,0.12);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tunisia-scene::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #f4d4ad;
+    border-radius: 50% 50% 0 0;
+}
+
+.hero-mascot {
+    position: relative;
+    z-index: 3;
+    width: 75%;
+    height: 365px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 12px rgba(0,0,0,0.12));
+    animation: mascotFloat 3s ease-in-out infinite;
+}
+
+.scene-flag {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 48px;
+    z-index: 4;
+}
+
+.scene-sun {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    font-size: 45px;
+}
+
+.scene-cloud {
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    font-size: 45px;
+}
+
+.tunisian-landmarks {
+    position: absolute;
+    bottom: 65px;
+    left: 15px;
+    z-index: 2;
+    font-size: 43px;
+}
+
+.scene-location {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    z-index: 4;
+    font-size: 35px;
+}
+
+.mascot-message {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 5;
+    background: white;
+    padding: 13px 18px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.mascot-message strong {
+    color: #e51b2b;
+    font-size: 16px;
+}
+
+.mascot-message p {
+    color: #696b7b;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+@media (max-width: 650px) {
+
+    .hero {
+        padding: 40px 5%;
+    }
+
+    .tunisia-scene {
+        min-height: 350px;
+    }
+
+    .hero-mascot {
+        height: 275px;
+    }
+
+    .mascot-message {
+        bottom: 12px;
+        left: 12px;
+    }
+
+    .scene-flag {
+        font-size: 35px;
+    }
+
+}
+
+
+/* QUICK MENU IMPROVEMENTS */
+
+.quick-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease;
+}
+
+.quick-menu-panel a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    transition: all .25s ease;
+}
+
+.quick-menu-panel a span {
+    font-size: 20px;
+}
+
+.quick-menu-panel a:hover {
+    transform: translateX(-5px);
+}
+
+.quick-menu-panel a.active-page {
+    background: linear-gradient(135deg, #7045b5, #a34baf);
+    color: white;
+    box-shadow: 0 4px 12px #7045b533;
+}
+
+.quick-menu-panel h3 {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+/* =====================================
+   9RIB - MODERN PURPLE DESIGN
+===================================== */
+
+:root {
+    --primary: #7045b5;
+    --primary-dark: #56349b;
+    --red-light: #eee8f8;
+    --dark: #30264a;
+    --text: #665e75;
+    --light: #f5f3fb;
+    --white: #ffffff;
+    --border: #eee8f8;
+    --shadow: 0 10px 30px rgba(65, 40, 100, 0.08);
+}
+
+/* GENERAL */
+
+body {
+    background: #f5f3fb;
+    color: #30264a;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(48, 38, 74, 0.06);
+}
+
+.logo-icon,
+.provider-btn {
+    background: #7045b5;
+}
+
+.logo-dot,
+.navbar nav a:hover {
+    color: #7045b5;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(135deg, #f5f3fb, #eee8f8);
+}
+
+.hero h1 span,
+.welcome-badge {
+    color: #7045b5;
+}
+
+.welcome-badge {
+    background: #ffffff;
+}
+
+/* REMOVE CARTOON IMAGES */
+
+.hero-mascot,
+.category-illustration img {
+    display: none;
+}
+
+/* HERO VISUAL */
+
+.tunisia-scene {
+    background: linear-gradient(145deg, #eee8f8, #ffffff);
+    border: 1px solid #eee8f8;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+}
+
+.tunisia-scene::after {
+    background: linear-gradient(135deg, #e7dcf7, #f5f3fb);
+}
+
+/* BUTTONS */
+
+.search-box button,
+.location-form button,
+.provider-filters button {
+    background: #7045b5;
+}
+
+.search-box button:hover,
+.location-form button:hover,
+.provider-filters button:hover,
+.provider-btn:hover {
+    background: #56349b;
+}
+
+/* CATEGORY CARDS */
+
+.service-card {
+    border: 1px solid #eee8f8;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.service-card:hover {
+    border-color: #cbb8e9;
+    box-shadow: 0 15px 30px rgba(112, 69, 181, 0.12);
+}
+
+.health,
+.home,
+.shop,
+.education,
+.transport,
+.beauty {
+    background: #f5f3fb;
+}
+
+/* PROVIDERS */
+
+.nearby-section {
+    background: #ffffff;
+}
+
+.provider-card {
+    border-color: #eee8f8;
+    border-radius: 20px;
+}
+
+.provider-card h3,
+.provider-card .service-info h3 {
+    color: #7045b5;
+}
+
+/* LOCATION */
+
+.location-section {
+    background: linear-gradient(135deg, #f5f3fb, #eee8f8);
+}
+
+.location-form {
+    border-radius: 22px;
+}
+
+#locationResult {
+    color: #7045b5;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #30264a;
+}
+/* =====================================
+   9RIB - COMPLETE MODERN PURPLE DESIGN
+===================================== */
+
+:root {
+    --primary: #7045b5;
+    --primary-dark: #56349b;
+    --red-light: #eee8f8;
+    --dark: #30264a;
+    --text: #665e75;
+    --light: #f5f3fb;
+    --white: #ffffff;
+    --border: #eee8f8;
+    --shadow: 0 10px 30px rgba(65, 40, 100, 0.08);
+}
+
+body {
+    background: #f5f3fb;
+    color: #30264a;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(48, 38, 74, 0.06);
+}
+
+.logo-icon,
+.provider-btn {
+    background: #7045b5;
+}
+
+.logo-icon {
+    box-shadow: 0 5px 12px rgba(112, 69, 181, 0.2);
+}
+
+.logo-dot,
+.navbar nav a:hover {
+    color: #7045b5;
+}
+
+.provider-btn:hover {
+    background: #56349b;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(135deg, #f5f3fb, #eee8f8);
+}
+
+.hero::before {
+    display: none;
+}
+
+.welcome-badge {
+    color: #7045b5;
+    background: #fff;
+}
+
+.hero h1 span {
+    color: #7045b5;
+}
+
+.hero-content > p {
+    color: #665e75;
+}
+
+.search-box {
+    border-color: #eee8f8;
+    box-shadow: 0 10px 30px rgba(65, 40, 100, 0.08);
+}
+
+.search-box button,
+.location-form button,
+.provider-filters button {
+    background: #7045b5;
+}
+
+.search-box button:hover,
+.location-form button:hover,
+.provider-filters button:hover {
+    background: #56349b;
+}
+
+/* MODERN HERO VISUAL */
+
+.tunisia-scene {
+    position: relative;
+    min-height: 420px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #eee8f8, #fff);
+    border: 1px solid #eee8f8;
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+}
+
+.tunisia-scene::after {
+    display: none;
+}
+
+.hero-visual-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(164, 124, 229, 0.12);
+}
+
+.circle-one {
+    width: 260px;
+    height: 260px;
+    top: -90px;
+    right: -70px;
+}
+
+.circle-two {
+    width: 190px;
+    height: 190px;
+    bottom: -75px;
+    left: -55px;
+    background: rgba(112, 69, 181, 0.10);
+}
+
+.hero-visual-content {
+    position: relative;
+    z-index: 2;
+    max-width: 390px;
+    padding: 35px;
+    text-align: center;
+}
+
+.hero-visual-icon {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 22px;
+    display: grid;
+    place-items: center;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #7045b5, #a47ce5);
+    color: #fff;
+    font-size: 45px;
+    font-weight: 900;
+    box-shadow: 0 12px 25px rgba(112, 69, 181, 0.22);
+}
+
+.hero-visual-label {
+    display: inline-block;
+    color: #7045b5;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 13px;
+}
+
+.hero-visual-content h2 {
+    color: #30264a;
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.hero-visual-content p {
+    color: #665e75;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.hero-visual-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.hero-visual-tags span {
+    padding: 8px 13px;
+    border-radius: 30px;
+    background: #fff;
+    color: #7045b5;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* SECTION HEADINGS */
+
+.section-heading .small-title,
+.location-content > .small-title {
+    color: #7045b5;
+    background: #eee8f8;
+}
+
+.section-heading h2,
+.location-content h2 {
+    color: #30264a;
+}
+
+.section-heading p,
+.location-content > p {
+    color: #665e75;
+}
+
+/* CATEGORIES */
+
+.services-section {
+    background: #fff;
+}
+
+.services-grid {
+    gap: 22px;
+}
+
+.service-card {
+    background: #fff;
+    border: 1px solid #eee8f8;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: .25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: #cbb8e9;
+    box-shadow: 0 15px 30px rgba(112, 69, 181, 0.12);
+}
+
+.category-illustration {
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f3fb;
+}
+
+.category-illustration img {
+    display: none !important;
+}
+
+.category-illustration > span {
+    position: static;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    border-radius: 19px;
+    background: #fff;
+    color: #7045b5;
+    font-size: 32px;
+    font-weight: 800;
+    box-shadow: 0 7px 20px rgba(48, 38, 74, 0.08);
+}
+
+.health,
+.home,
+.shop,
+.education,
+.transport,
+.beauty {
+    background: #f5f3fb;
+}
+
+.service-info {
+    padding: 20px;
+}
+
+.service-info h3 {
+    color: #56349b;
+}
+
+.service-info p {
+    color: #665e75;
+}
+
+/* PROVIDERS */
+
+.nearby-section {
+    background: #fff;
+}
+
+.provider-filters {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.provider-filters select,
+.provider-filters input {
+    border: 1px solid #eee8f8;
+    border-radius: 13px;
+    background: #fff;
+    color: #30264a;
+    padding: 14px;
+    min-width: 0;
+}
+
+.provider-filters input:focus,
+.provider-filters select:focus {
+    outline: none;
+    border-color: #7045b5;
+    box-shadow: 0 0 0 3px rgba(112, 69, 181, 0.1);
+}
+
+.provider-card {
+    border-color: #eee8f8;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.provider-card:hover {
+    box-shadow: 0 15px 30px rgba(112, 69, 181, 0.12);
+}
+
+.provider-card h3,
+.provider-card .service-info h3 {
+    color: #7045b5;
+}
+
+/* LOCATION */
+
+.location-section {
+    background: linear-gradient(135deg, #f5f3fb, #eee8f8);
+}
+
+.location-form {
+    border: 1px solid #eee8f8;
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+}
+
+.form-group select,
+.form-group input {
+    border-color: #eee8f8;
+    border-radius: 12px;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    border-color: #7045b5;
+    box-shadow: 0 0 0 3px rgba(112, 69, 181, 0.1);
+}
+
+#locationResult {
+    color: #7045b5;
+}
+
+/* NEARBY RESULTS */
+
+.nearby-results-section {
+    background: #f5f3fb;
+}
+
+#nearbyResults:empty {
+    display: none;
+}
+
+#noNearbyResults {
+    color: #665e75;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #30264a;
+}
+
+.footer .logo {
+    color: #fff;
+}
+
+.footer div a:hover {
+    color: #cbb8e9;
+}
+
+/* QUICK MENU */
+
+.quick-menu-panel a.active-page {
+    background: linear-gradient(135deg, #7045b5, #a34baf);
+    color: #fff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .provider-filters {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+
+    .tunisia-scene {
+        min-height: 330px;
+    }
+
+    .hero-visual-content {
+        padding: 25px;
+    }
+
+    .hero-visual-content h2 {
+        font-size: 25px;
+    }
+
+    .category-illustration {
+        height: 105px;
+    }
+
+    .category-illustration > span {
+        width: 52px;
+        height: 52px;
+        font-size: 27px;
+    }
+
+    .provider-filters {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid,
+    #providersList.services-grid,
+    .nearby-section .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 380px) {
+
+    .services-grid,
+    #providersList.services-grid,
+    .nearby-section .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =====================================
+   9RIB - REAL PHOTOS DESIGN
+===================================== */
+
+/* HERO PHOTO */
+
+.tunisia-scene {
+    min-height: 460px;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 28px;
+    box-shadow: 0 15px 40px rgba(48, 38, 74, 0.13);
+}
+
+.hero-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-photo-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 35px;
+    color: #fff;
+    background: linear-gradient(
+        to top,
+        rgba(30, 20, 45, 0.82),
+        rgba(30, 20, 45, 0.05)
+    );
+}
+
+.hero-photo-overlay span {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero-photo-overlay h2 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.hero-photo-overlay p {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 350px;
+    color: #fff;
+}
+
+/* REAL CATEGORY PHOTOS */
+
+.category-illustration {
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+    background: #eee8f8;
+}
+
+.category-illustration img {
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover .category-illustration img {
+    transform: scale(1.07);
+}
+
+.category-illustration > span {
+    display: none !important;
+}
+
+/* CATEGORY CARDS */
+
+.service-card {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.service-info {
+    background: #fff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    .tunisia-scene {
+        min-height: 350px;
+    }
+
+    .hero-photo-overlay {
+        padding: 22px;
+    }
+
+    .hero-photo-overlay h2 {
+        font-size: 25px;
+    }
+
+    .category-illustration {
+        height: 145px;
+    }
+}
+
+/* =====================================
+   9RIB - NEARBY SERVICES PHOTOS
+===================================== */
+
+.nearby-place-card {
+    overflow: hidden;
+    padding: 0;
+    border-radius: 18px;
+    background: #fff;
+}
+
+.nearby-place-image {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.nearby-place-content {
+    padding: 18px;
+}
+
+.nearby-place-content h3 {
+    color: #30264a;
+    margin-bottom: 10px;
+}
+
+.nearby-place-content p {
+    margin: 8px 0;
+    color: #665e75;
+    line-height: 1.6;
+}
+
+.nearby-place-content a {
+    display: inline-block;
+    margin: 8px 10px 0 0;
+    color: #7045b5;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.nearby-place-content a:hover {
+    color: #56349b;
+}
+
+@media (max-width: 650px) {
+    .nearby-place-image {
+        height: 160px;
+    }
+}
+/* ADMIN ACCESS BUTTON */
+
+.admin-access-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 13px;
+    margin-left: 8px;
+    border-radius: 8px;
+    background: #7045b5;
+    color: white;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.admin-access-btn:hover {
+    background: #56349b;
+    transform: translateY(-2px);
+}
+
+.admin-access-btn[hidden] {
+    display: none !important;
+}

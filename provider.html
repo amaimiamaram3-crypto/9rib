@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un service | 9rib</title>
+
+    <link rel="stylesheet" href="provider.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quick-menu.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">9rib<span>.</span></a>
+        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+    </header>
+
+    <main class="container">
+
+        <section class="intro">
+            <span class="tag">REJOIGNEZ 9RIB</span>
+            <h1>Ajoutez votre <span>service</span></h1>
+            <p>Présentez votre activité et faites-vous découvrir par les personnes près de chez vous.</p>
+        </section>
+
+        <section class="form-card">
+
+            <h2>Informations de votre activité</h2>
+            <p class="subtitle">Remplissez les informations ci-dessous.</p>
+
+            <form id="providerForm">
+
+                <div class="form-group">
+                    <label for="ownerName">Nom du propriétaire</label>
+                    <input type="text" id="ownerName" placeholder="Votre nom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="businessName">Nom de l'activité</label>
+                    <input type="text" id="businessName" placeholder="Ex : Salon de beauté..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Catégorie</label>
+                    <select id="category" required>
+                        <option value="">Choisir une catégorie</option>
+                        <option value="Santé">Santé</option>
+                        <option value="Maison">Maison</option>
+                        <option value="Commerce">Commerce</option>
+                        <option value="Éducation">Éducation</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Beauté">Beauté</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="serviceType">Type de service / Spécialité</label>
+                    <input
+                    type="text"
+                    id="serviceType"
+                    placeholder="Ex : Médecin généraliste, Dentiste..."
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="governorate">Gouvernorat</label>
+                    <select id="governorate" required>
+                        <option value="">Choisir un gouvernorat</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="delegation">Délégation</label>
+                    <select id="delegation" required>
+                        <option value="">Choisir une délégation</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Téléphone professionnel</label>
+                    <input type="tel" id="phone" placeholder="Ex : 20 000 000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Adresse</label>
+                    <input type="text" id="address" placeholder="Adresse de votre activité" required>
+                </div>
+                <div class="form-group">
+    <label>Localisez votre activité sur la carte</label>
+    <p>Cliquez sur la carte pour choisir votre emplacement.</p>
+
+    <div id="providerMap"></div>
+</div>
+
+<div class="form-group">
+    <label for="latitude">Latitude</label>
+    <input type="number" id="latitude" step="any" readonly>
+</div>
+
+<div class="form-group">
+    <label for="longitude">Longitude</label>
+    <input type="number" id="longitude" step="any" readonly>
+</div>
+
+
+                <button type="submit" id="submitBtn">
+                    Ajouter mon activité
+                </button>
+
+                <p id="successMessage"></p>
+                <p id="errorMessage"></p>
+
+            </form>
+        </section>
+
+    </main>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="provider.js" type="module"></script>
+
+</body>
+</html>
